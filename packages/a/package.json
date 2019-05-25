@@ -1,0 +1,22 @@
+{
+  "name": "@stereobooster/a",
+  "version": "0.0.1",
+  "description": "a",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": "",
+  "author": "stereobooster <stereobooster@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "start": "tsc -w",
+    "test": "echo 'Run this command instead: cd ../.. && yarn test' && exit 1",
+    "build": "tsc",
+    "clean": "rimraf tsconfig.tsbuildinfo lib dist"
+  }
+}

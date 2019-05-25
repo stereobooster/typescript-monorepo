@@ -1,0 +1,36 @@
+{
+  "name": "@stereobooster/stories",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Stories for typescript monorepo",
+  "license": "MIT",
+  "scripts": {
+    "start": "start-storybook -p 8080",
+    "storybook": "start-storybook -p 8080",
+    "test": "./node_modules/.bin/chromatic test --app-code=\"\"",
+    "build": "build-storybook -o dist",
+    "clean": "rimraf tsconfig.tsbuildinfo lib dist"
+  },
+  "dependencies": {
+    "@stereobooster/a": "*",
+    "@stereobooster/b": "*",
+    "@stereobooster/c": "*"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.3",
+    "@storybook/addon-info": "^5.0.11",
+    "@storybook/addons": "5.0.6",
+    "@storybook/core": "5.0.6",
+    "@storybook/react": "5.0.6",
+    "@types/storybook__addon-info": "^4.1.1",
+    "@types/storybook__react": "4.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "8.0.5",
+    "react-docgen-typescript-loader": "^3.1.0",
+    "storybook-chromatic": "1.3.2"
+  }
+}

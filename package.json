@@ -1,0 +1,35 @@
+{
+  "name": "typescript-monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "Typescript monorepo",
+  "repository": "",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prestart": "yarn build",
+    "start": "lerna run start --stream --parallel",
+    "pretest": "yarn build",
+    "test": "jest --config=jest.json",
+    "build": "lerna run build --stream --scope=@stereobooster/{a,b,c}",
+    "clean": "lerna run clean --stream --parallel",
+    "start-stories": "lerna run start --stream --scope=@stereobooster/stories",
+    "build-stories": "lerna run build --stream --scope=@stereobooster/stories",
+    "test-stories": "lerna run test --stream --scope=@stereobooster/stories"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-test-renderer": "^16.8.1",
+    "jest": "^24.8.0",
+    "lerna": "^3.14.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  }
+}

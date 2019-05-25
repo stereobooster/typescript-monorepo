@@ -1,0 +1,3 @@
+[build]
+  command = "yarn build && yarn build-stories"
+  publish = "packages/stories/dist/"

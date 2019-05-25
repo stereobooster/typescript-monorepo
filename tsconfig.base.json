@@ -1,0 +1,31 @@
+{
+  "exclude": ["node_modules", "dist", "lib", "__tests__", "**/*.test*", "**/*.spec*"],
+  "include": ["packages/*/src"],
+  "compilerOptions": {
+    "skipLibCheck": false,
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["dom", "esnext"],
+    "jsx": "react",
+    "declaration": true,
+    "declarationMap": true,
+    "rootDir": ".",
+    "outDir": "lib",
+    "downlevelIteration": true,
+    "strict": true,
+    "removeComments": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@stereobooster/*": ["packages/*/src"]
+    }
+  }
+}
