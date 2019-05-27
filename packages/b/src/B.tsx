@@ -8,4 +8,4 @@ export const B: React.FC<BProps> = ({ children }) => {
 
 // B.defaultProps = {};
 // B.propTypes = {};
-B.displayName = 'B'
+B.displayName = "B";

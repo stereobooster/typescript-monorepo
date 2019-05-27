@@ -26,7 +26,8 @@
     "baseUrl": ".",
     "paths": {
       "@stereobooster/*": ["packages/*/src"]
-    }
+    },
+    "composite": true
   },
   "references": [
     {
