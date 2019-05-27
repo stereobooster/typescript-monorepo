@@ -13,10 +13,6 @@
   "files": [
     "lib"
   ],
-  "scripts": {
-    "test": "echo 'Run this command instead: cd ../.. && yarn test' && exit 1",
-    "clean": "rimraf tsconfig.tsbuildinfo lib dist"
-  },
   "dependencies": {},
   "peerDependencies": {
     "@stereobooster/a": "0.0.1",

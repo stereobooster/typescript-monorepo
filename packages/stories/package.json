@@ -5,6 +5,7 @@
   "description": "Stories for typescript monorepo",
   "license": "MIT",
   "scripts": {
+    "start": "start-storybook -p 8080",
     "storybook": "start-storybook -p 8080",
     "test": "./node_modules/.bin/chromatic test --app-code=\"\"",
     "build": "build-storybook -o dist",
