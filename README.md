@@ -183,7 +183,7 @@ Add command to `package.json`
 }
 ```
 
-**Problem 2**: we will publish modules as ES5 + CommonJS, which makes no sense for React package, which would require some kind of bundler to consume packages, like Parcel or Webpack.
+~~**Problem 2**: we will publish modules as ES5 + CommonJS, which makes no sense for React package, which would require some kind of bundler to consume packages, like Parcel or Webpack.~~
 
 **Problem 3**: there are sub-dependencies, so we need to build all packages first and only after we can run tests. That is why we need `pretest` script.
 

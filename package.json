@@ -18,10 +18,14 @@
     "clean": "rimraf packages/*/{tsconfig.tsbuildinfo,lib,dist}"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
     "@types/jest": "^24.0.13",
     "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
     "@types/react-test-renderer": "^16.8.1",
+    "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "lerna": "^3.14.1",
     "react": "^16.8.6",
