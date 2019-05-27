@@ -242,4 +242,4 @@ Now a developer can run `yarn start` (in one terminal) and `yarn test --watch` (
 
 **Problem 3**: there are sub-dependencies, so we need to build all packages first and only after we can run the start script. That is why we need `prestart` script.
 
-**Problem 4**: If there is type error in stories it will show up in the browser, but if there is type error in `a`, `b` or `c` packages it will only show up in terminal, which spoils all DX, because instead of switching between editor and browser you will need to switch to terminal as well to check if there is an error or not.
+~~**Problem 4**: If there is type error in stories it will show up in the browser, but if there is type error in `a`, `b` or `c` packages it will only show up in terminal, which spoils all DX, because instead of switching between editor and browser you will need to switch to terminal as well to check if there is an error or not.~~

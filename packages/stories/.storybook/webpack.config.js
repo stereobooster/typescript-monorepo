@@ -3,7 +3,12 @@ module.exports = ({ config }) => {
     test: /\.(ts|tsx)$/,
     use: [
       {
-        loader: require.resolve("awesome-typescript-loader")
+        loader: require.resolve("awesome-typescript-loader"),
+        options: {
+          reportFiles: [
+            "../**/src/**/*.{ts,tsx}"
+          ]
+        }
       },
       // Optional
       {
