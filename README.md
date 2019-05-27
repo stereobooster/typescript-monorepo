@@ -14,8 +14,8 @@
 ## Packages structure
 
 - [`d`](packages/d) - utility library
-- [`b`](packages/b) - React components library, which depends on `a`
-- [`c`](packages/c) - another React components library, which depends on `a`
+- [`b`](packages/b) - React components library, which depends on `d`
+- [`c`](packages/c) - another React components library, which depends on `d`
 - [`stories`](packages/stories) - showcase of `b` and `c` package's compnents as well used for development (initial plan, can change later)
 
 ## Tools
@@ -101,17 +101,17 @@ In `package.json` for packages `b` and `c` add:
 }
 ```
 
-We need `peerDependencies` to make sure that when packages (`a`, `b`, `c`) installed by the end user they will use the same instance of package `a`, otherwise, TypeScript can complain about incompatible types (especially if use inheritance and private fields). In `peerDependencies` we specify a version, but in `devDependencies` we don't need to, because we need simply to instruct `yarn` to use whatever version of package we have locally.
+We need `peerDependencies` to make sure that when packages (`d`, `b`, `c`) installed by the end user they will use the same instance of package `d`, otherwise, TypeScript can complain about incompatible types (especially if use inheritance and private fields). In `peerDependencies` we specify a version, but in `devDependencies` we don't need to, because we need simply to instruct `yarn` to use whatever version of package we have locally.
 
 Now we can build projects. Add to root `package.json`:
 
 ```json
 "scripts": {
-  "build": "lerna run build --stream --scope=@stereobooster/{a,b,c}"
+  "build": "lerna run build --stream --scope=@stereobooster/{d,b,c}"
 }
 ```
 
-and to `package.json` for `a`, `b`, `c`
+and to `package.json` for `d`, `b`, `c`
 
 ```json
 "scripts": {
@@ -119,7 +119,7 @@ and to `package.json` for `a`, `b`, `c`
 }
 ```
 
-**Problem 1**: because of sub-dependencies (packages `b` and `c` depend on `a`, `stories` depends on `a`, `b`, `c`) we need to build packages accordingly, e.g. first `a`, second `b` and `c`, third `stories`. That is why we can't use `--parallel` flag for `lerna` for build command.
+**Problem 1**: because of sub-dependencies (packages `b` and `c` depend on `d`, `stories` depends on `d`, `b`, `c`) we need to build packages accordingly, e.g. first `d`, second `b` and `c`, third `stories`. That is why we can't use `--parallel` flag for `lerna` for build command.
 
 ### React
 
@@ -224,9 +224,9 @@ We will need the following things in `package.json`:
 
 Create configurations in `.storybook` (again, based on official instruction). Now we can create stories in `/src/b` for `b` packages, in `/src/c` for `c` package.
 
-Storybook will watch for changes in `stories/src`, but not for changes in `a/src`, `b/src`, `c/src`. We will need to use TypeScript to watch for changes in other packages.
+Storybook will watch for changes in `stories/src`, but not for changes in `d/src`, `b/src`, `c/src`. We will need to use TypeScript to watch for changes in other packages.
 
-Add to `package.json` of `a`, `b` and `c` packages:
+Add to `package.json` of `d`, `b` and `c` packages:
 
 ```json
 "scripts": {
@@ -247,4 +247,4 @@ Now a developer can run `yarn start` (in one terminal) and `yarn test --watch` (
 
 **Problem 3**: there are sub-dependencies, so we need to build all packages first and only after we can run the start script. That is why we need `prestart` script.
 
-~~**Problem 4**: If there is type error in stories it will show up in the browser, but if there is type error in `a`, `b` or `c` packages it will only show up in terminal, which spoils all DX, because instead of switching between editor and browser you will need to switch to terminal as well to check if there is an error or not.~~
+~~**Problem 4**: If there is type error in stories it will show up in the browser, but if there is type error in `d`, `b` or `c` packages it will only show up in terminal, which spoils all DX, because instead of switching between editor and browser you will need to switch to terminal as well to check if there is an error or not.~~
