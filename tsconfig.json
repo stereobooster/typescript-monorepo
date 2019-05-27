@@ -31,7 +31,7 @@
   },
   "references": [
     {
-      "path": "packages/a"
+      "path": "packages/d"
     },
     {
       "path": "packages/b"
