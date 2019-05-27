@@ -3,8 +3,8 @@
   "files":  [],
   "compilerOptions": {
     "skipLibCheck": false,
-    "target": "es5",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "lib": ["dom", "esnext"],
     "jsx": "react",
     "declaration": true,

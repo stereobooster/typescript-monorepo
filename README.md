@@ -20,6 +20,10 @@
 
 ## Tools
 
+Info in this section is stale:
+  - **Problem 2** is resolved in PR [#5](https://github.com/stereobooster/typescript-monorepo/pull/5)
+  - **Problem 4** is resolved in PR [#4](https://github.com/stereobooster/typescript-monorepo/pull/4)
+
 ### yarn
 
 `yarn` instead of `npm`, because it supports `workspaces` to link cross-dependencies.
@@ -183,7 +187,7 @@ Add command to `package.json`
 }
 ```
 
-**Problem 2**: we will publish modules as ES5 + CommonJS, which makes no sense for React package, which would require some kind of bundler to consume packages, like Parcel or Webpack.
+~~**Problem 2**: we will publish modules as ES5 + CommonJS, which makes no sense for React package, which would require some kind of bundler to consume packages, like Parcel or Webpack.~~
 
 **Problem 3**: there are sub-dependencies, so we need to build all packages first and only after we can run tests. That is why we need `pretest` script.
 

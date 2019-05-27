@@ -1,6 +1,7 @@
 {
-  "moduleFileExtensions": ["ts", "tsx", "js"],
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
   "transform": {
+    "\\.jsx?$": "babel-jest",
     "\\.tsx?$": "ts-jest"
   },
   "testMatch": ["**/__tests__/**/*.test.*"],
