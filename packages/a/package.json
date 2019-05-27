@@ -14,9 +14,7 @@
     "lib"
   ],
   "scripts": {
-    "start": "tsc -w",
     "test": "echo 'Run this command instead: cd ../.. && yarn test' && exit 1",
-    "build": "tsc",
     "clean": "rimraf tsconfig.tsbuildinfo lib dist"
   }
 }

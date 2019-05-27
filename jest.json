@@ -6,7 +6,7 @@
   "testMatch": ["**/__tests__/**/*.test.*"],
   "globals": {
     "ts-jest": {
-      "tsConfig": "tsconfig.base.json"
+      "tsConfig": "tsconfig.json"
     }
   },
   "moduleNameMapper": {

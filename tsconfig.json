@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules", "dist", "lib", "__tests__", "**/*.test*", "**/*.spec*"],
-  "include": ["packages/*/src"],
+  "files":  [],
   "compilerOptions": {
     "skipLibCheck": false,
     "target": "es5",
@@ -27,5 +27,16 @@
     "paths": {
       "@stereobooster/*": ["packages/*/src"]
     }
-  }
+  },
+  "references": [
+    {
+      "path": "packages/a"
+    },
+    {
+      "path": "packages/b"
+    },
+    {
+      "path": "packages/c"
+    }
+  ]
 }

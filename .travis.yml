@@ -12,4 +12,4 @@ env:
 
 script:
   - if [ "$CHROMATIC" == "false" ]; then  yarn test                         ; fi
-  - if [ "$CHROMATIC" == "true" ];  then  yarn build && yarn test-stories   ; fi
+#  - if [ "$CHROMATIC" == "true" ];  then  yarn build && yarn build-stories && yarn test-stories   ; fi
