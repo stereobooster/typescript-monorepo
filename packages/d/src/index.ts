@@ -1,2 +1,2 @@
-export { a } from "./a";
+export { d } from "./d";
 export * from "./types";

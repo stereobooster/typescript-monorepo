@@ -13,7 +13,7 @@
 
 ## Packages structure
 
-- [`a`](packages/a) - utility library
+- [`d`](packages/d) - utility library
 - [`b`](packages/b) - React components library, which depends on `a`
 - [`c`](packages/c) - another React components library, which depends on `a`
 - [`stories`](packages/stories) - showcase of `b` and `c` package's compnents as well used for development (initial plan, can change later)
@@ -21,6 +21,7 @@
 ## Tools
 
 Info in this section is stale:
+  - **Problem 1** is resolved in PR [#2](https://github.com/stereobooster/typescript-monorepo/pull/2)
   - **Problem 2** is resolved in PR [#5](https://github.com/stereobooster/typescript-monorepo/pull/5)
   - **Problem 4** is resolved in PR [#4](https://github.com/stereobooster/typescript-monorepo/pull/4)
 
@@ -71,7 +72,7 @@ Create `tsconfig.base.json`. This is what you need to add to enable monorepo:
 }
 ```
 
-Create `packages/a/`, `packages/b/`, `packages/c/`, `packages/stories/`. Add `tsconfig.json` to each one:
+Create `packages/d/`, `packages/b/`, `packages/c/`, `packages/stories/`. Add `tsconfig.json` to each one:
 
 ```json
 {
@@ -85,7 +86,7 @@ Create `packages/a/`, `packages/b/`, `packages/c/`, `packages/stories/`. Add `ts
     "baseUrl": "src"
   },
   // references required for monorepo to work
-  "references": [{ "path": "../a" }]
+  "references": [{ "path": "../d" }]
 }
 ```
 
@@ -93,10 +94,10 @@ In `package.json` for packages `b` and `c` add:
 
 ```json
 "peerDependencies": {
-  "@stereobooster/a": "0.0.1"
+  "@stereobooster/d": "0.0.1"
 },
 "devDependencies": {
-  "@stereobooster/a": "*"
+  "@stereobooster/d": "*"
 }
 ```
 
@@ -203,7 +204,7 @@ We will need the following things in `package.json`:
   "build": "build-storybook -o dist"
 },
 "dependencies": {
-  "@stereobooster/a": "*",
+  "@stereobooster/d": "*",
   "@stereobooster/b": "*",
   "@stereobooster/c": "*"
 },

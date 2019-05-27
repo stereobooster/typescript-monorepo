@@ -1,7 +1,7 @@
 {
-  "name": "@stereobooster/a",
+  "name": "@stereobooster/d",
   "version": "0.0.1",
-  "description": "a",
+  "description": "d",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "repository": "",

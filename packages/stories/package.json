@@ -12,7 +12,7 @@
     "clean": "rimraf tsconfig.tsbuildinfo lib dist"
   },
   "dependencies": {
-    "@stereobooster/a": "*",
+    "@stereobooster/d": "*",
     "@stereobooster/b": "*",
     "@stereobooster/c": "*"
   },
