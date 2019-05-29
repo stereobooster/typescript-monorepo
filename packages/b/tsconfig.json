@@ -3,6 +3,12 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "lib",
-    "rootDir": "src"
-  }
+    "rootDir": "src",
+    "baseUrl": ".",
+  },
+  "references": [
+    {
+      "path": "../d"
+    }
+  ]
 }
