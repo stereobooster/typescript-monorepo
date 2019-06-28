@@ -24,6 +24,6 @@
     "@stereobooster/d": "*"
   },
   "scripts": {
-    "watch": "yarn tsc -w --preserveWatchOutput"
+    "start": "tsc -w --preserveWatchOutput"
   }
 }
