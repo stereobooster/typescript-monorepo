@@ -7,8 +7,6 @@
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "jsx": "react",
-    "declaration": true,
-    "declarationMap": true,
     "rootDir": ".",
     "outDir": "lib",
     "downlevelIteration": true,
@@ -21,23 +19,20 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@stereobooster/*": ["packages/*/src"]
     },
-    "composite": true
+    // https://github.com/RyanCavanaugh/learn-a/#tsconfigsettingsjson
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
   },
   "references": [
-    {
-      "path": "packages/d"
-    },
-    {
-      "path": "packages/b"
-    },
-    {
-      "path": "packages/c"
-    }
+    { "path": "packages/d" },
+    { "path": "packages/b" },
+    { "path": "packages/c" }
   ]
 }
