@@ -9,7 +9,9 @@
   "private": true,
   "scripts": {
     "prestart": "yarn build",
-    "start": "lerna run start --stream --parallel",
+    "start": "run-p start:*",
+    "start:stories": "lerna run start --stream --scope=@stereobooster/stories",
+    "start:watch": "tsc --build --watch",
     "pretest": "yarn build",
     "test": "jest --config=jest.json",
     "test:stories": "lerna run test --stream --scope=@stereobooster/stories",
@@ -28,6 +30,7 @@
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "lerna": "^3.14.1",
+    "npm-run-all": "^4.1.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
