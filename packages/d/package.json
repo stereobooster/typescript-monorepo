@@ -12,5 +12,8 @@
   },
   "files": [
     "lib"
-  ]
+  ],
+  "scripts": {
+    "watch": "yarn tsc -w --preserveWatchOutput"
+  }
 }

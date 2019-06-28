@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "@stereobooster/d": "*"
+  },
+  "scripts": {
+    "watch": "yarn tsc -w --preserveWatchOutput"
   }
 }
